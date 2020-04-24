@@ -50,7 +50,7 @@ const navbar = document.querySelector('#navbar__list');
             sections.forEach( e=> {
                 const section = e.getBoundingClientRect();
                 const li = document.querySelector('li[data-nav="' + e.id + '"]');
-                if (section.top <= 150 && section.bottom >= 150){
+                if (section.top <= 225 && section.bottom >= 225){
                     e.classList.add('your-active-class');
                     li.classList.add('active');
                 } else {
@@ -82,4 +82,12 @@ const navbar = document.querySelector('#navbar__list');
 
 // Set sections as active
 
-
+var scrolling = false;
+   window.addEventListener('scroll', function(){
+      if( !scrolling ) {
+         scrolling = true;
+         (!window.requestAnimationFrame)
+            ? setTimeout(navbar, 250)
+            : requestAnimationFrame(navbar);
+      }
+});
