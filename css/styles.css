@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*
  *
  * CSS written based on SMACSS architecture.
@@ -223,11 +223,7 @@ section.your-active-class .landing__container::after {
 	}
 }
 
-li.your-active-class{
-    text-align: center;
-}
-||||||| merged common ancestors
-=======
+
 /*
  *
  * CSS written based on SMACSS architecture.
@@ -452,4 +448,4 @@ section.your-active-class .landing__container::after {
 	}
 }
 
->>>>>>> 0427a3065a887aadf5740e05a4dad188660d696f
+
