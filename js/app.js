@@ -19,19 +19,37 @@
 */
 const sections = document.querySelectorAll('section');
 const navbar = document.querySelector('#navbar__list');
+const menu = document.querySelector('navbar__menu');
 /**
  * End Global Variables
  * Start Helper Functions
  *
 */
+let timer = null;
+window.addEventListener('mousemove', () => {
+    if(timer !== null) {
+        clearTimeout(timer);        
+    }
+    timer = setTimeout(() => {
+         navbar.style.display = 'none';
+    }, 150);
+}, false);
 
+
+window.addEventListener('scroll', () => {
+    if(timer !== null) {
+        clearTimeout(timer);        
+    }
+    timer = setTimeout(()=> {
+         navbar.style.display = '';
+    }, );
+}, false);
 
 /**
  * End Helper Functions
  * Begin Main Functions
  *
 */
-
 
 // build the nav
     sections.forEach(e =>{
