@@ -25,15 +25,16 @@ const menu = document.querySelector('navbar__menu');
  * Start Helper Functions
  *
 */
-let timer = null;
+/*let timer = null;
 window.addEventListener('mousemove', () => {
     if(timer !== null) {
         clearTimeout(timer);        
     }
     timer = setTimeout(() => {
          navbar.style.display = 'none';
-    }, 150);
-}, false);
+    }, 800);
+
+return false}, );
 
 
 window.addEventListener('scroll', () => {
@@ -43,7 +44,24 @@ window.addEventListener('scroll', () => {
     timer = setTimeout(()=> {
          navbar.style.display = '';
     }, );
-}, false);
+}, false);*/
+
+window.addEventListener('mousemove', ()=>{
+    navbar.style.display ='';
+    show();
+    hide();
+});
+
+const hide =() => {
+    timer = setTimeout(()=>{
+        navbar.style.display ='none';
+    }, 1000);
+}
+const show = () => {
+    if(typeof timer != 'undefined'){
+        clearTimeout(timer);
+    }
+}
 
 /**
  * End Helper Functions
